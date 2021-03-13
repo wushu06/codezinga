@@ -19,38 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a235d679-ef48-4067-bb84-3215db0c3e94" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/Console/Command.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/Init.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/Init.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/Middleware.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/Model/Form.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/Model/FormInterface.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/Setup/Install.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/Activate.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/Activate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/Ajax.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/CPT.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/Cron.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/Enqueue.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/Enqueue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/Gutenberg.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/ShortCode.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/WP/User.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/backend/assets/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/backend/assets/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/backend/assets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/backend/assets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/backend/dashboard.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/backend/dashboard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/gutenberg/build/index.asset.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/gutenberg/build/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/gutenberg/build/index.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/gutenberg/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/gutenberg/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/src/view/gutenberg/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/wp-codeable-form.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/wp-codeable-form.php" afterDir="false" />
-    </list>
+    <list default="true" id="a235d679-ef48-4067-bb84-3215db0c3e94" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +88,7 @@
       <workItem from="1605206420692" duration="5223000" />
       <workItem from="1606126420375" duration="1109000" />
       <workItem from="1615628882570" duration="444000" />
-      <workItem from="1615629346509" duration="1541000" />
+      <workItem from="1615629346509" duration="1908000" />
     </task>
     <servers />
   </component>
