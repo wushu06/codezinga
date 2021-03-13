@@ -1,54 +1,90 @@
-machine:
-  timezone:
-    Europe/Copenhagen
+version: 2.1
+executors:
+  docker-executor:
+    docker: 
+      - image: circleci/node
 
-  php:
-    version: 5.3.3
+jobs:
+  test_plugin:
+    executor: docker-executor
+    steps:
+      - checkout
+      - run:
+          name: build plugin
+          command: cd frontend && npm install && npm run export
+      - setup_remote_docker
+      - run:
+          name: Set up network
+          command: |
+            docker network create wp-network
+      - run:
+          name: Set up database
+          command: |
+            docker run -d \
+              -e MYSQL_ROOT_PASSWORD=1234 \
+              -e MYSQL_DATABASE=wordpress \
+              --name db \
+              --network wp-network \
+              mysql:5.7
+      - run:
+          name: Setup WordPress
+          command: |
+            docker run -d \
+              -e WORDPRESS_DB_HOST=db:3306 \
+              -e WORDPRESS_DB_USER=root \
+              -e WORDPRESS_DB_PASSWORD=1234 \
+              -e WORDPRESS_DB_NAME=wordpress \
+              -e WORDPRESS_CONFIG_EXTRA="define('WP_SITEURL', 'http://' . \$_SERVER['HTTP_HOST']); define('WP_HOME', 'http://' . \$_SERVER['HTTP_HOST']);" \
+              --name wp-container \
+              --network wp-network \
+              wordpress
+      - run:
+          name: Install WordPress
+          command: |
+            docker run -it --rm \
+              --volumes-from wp-container \
+              --network wp-network \
+              wordpress:cli core install \
+                --url=localhost \
+                --title=test \
+                --admin_user=admin \
+                --admin_password=admin \
+                --admin_email=foo@bar.com
+      - run:
+          name: Install Relative URL Plugin
+          command: |
+            docker run -it --rm \
+              --volumes-from wp-container \
+              --user xfs \
+              --network wp-network \
+              wordpress:cli plugin install relative-url \
+                --activate \
+      - run:
+          name: copy Ghost Inspector plugin
+          command: docker cp ghost-inspector.zip wp-container:/var/www/html
+      - run:
+          name: Install Ghost Inspector plugin
+          command: |
+            docker run -it --rm \
+              --volumes-from wp-container \
+              --user xfs \
+              --network wp-network \
+              wordpress:cli plugin install /var/www/html/ghost-inspector.zip \
+                --activate
+      - run:
+          name: execute Ghost Inspector test(s)
+          command: |
+            docker run \
+              -e APP_PORT=wp-container:80 \
+              -e GI_API_KEY=$GI_API_KEY \
+              -e GI_SUITE=$GI_SUITE \
+              -e NGROK_TOKEN=$NGROK_TOKEN \
+              -e GI_PARAM_wp_username=admin \
+              -e GI_PARAM_wp_password=admin \
+              --network wp-network \
+              ghostinspector/test-runner-standalone
 
-  # This will be added to the `/etc/hosts` file
-  hosts:
-    wppusher-plugin.dev: 127.0.0.1
-
-dependencies:
-  pre:
-    # No password is required for the MySQL user `ubuntu`
-    - mysql -u ubuntu -e "create database wordpress"
-    
-    # Use cURL to fetch WP-CLI
-    - curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-    
-    # Make sure WP-CLI is executable
-    - chmod +x wp-cli.phar
-    
-    # Download WordPress into `wordpress` directory
-    - ./wp-cli.phar core download --allow-root --path=wordpress
-    
-    # Generate `wp-config.php` file
-    - ./wp-cli.phar core config --allow-root --dbname=wordpress --dbuser=ubuntu --dbhost=localhost --path=wordpress
-    
-    # Install WordPress
-    - ./wp-cli.phar core install --allow-root --admin_name=admin --admin_password=admin --admin_email=admin@example.com --url=http://wppusher-plugin.dev:8080 --title=WordPress --path=wordpress
-    
-    # Clonse WP Pusher plugin from GitHub
-    - git clone git@github.com:petersuhm/wppusher-plugin.git wordpress/wp-content/plugins/wppusher
-    
-    # And use WP-CLI to activate it
-    - ./wp-cli.phar plugin activate wppusher --path=wordpress
-
-  post:
-    # Copy Apache conf into `site-available`
-    - cp ~/wppusher-plugin/apache-ci.conf /etc/apache2/sites-available
-    
-    # Use `a2ensite` to create a symlink for the config
-    - a2ensite apache-ci.conf
-    
-    # Restart the Apache server
-    - sudo service apache2 restart
-
-test:
-  override:
-    # This is just for us to see that the WP Pusher plugin was actually installed and is active
-    - ./wp-cli.phar plugin list --path=wordpress
-    
-    # Finally, run our Behat features
-    - vendor/bin/behat
+workflows:
+  test:
+    jobs:
+      - test_plugin
