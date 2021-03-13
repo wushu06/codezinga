@@ -20,6 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a235d679-ef48-4067-bb84-3215db0c3e94" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/Readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form/composer.lock" beforeDir="false" />
@@ -65,7 +67,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpDebugGeneral" xdebug_debug_port="9001" xdebug_force_break_when_outside_project="false" />
   <component name="PhpServers">
@@ -89,7 +91,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -116,7 +118,8 @@
       <workItem from="1604823584174" duration="1720000" />
       <workItem from="1605206420692" duration="5223000" />
       <workItem from="1606126420375" duration="1109000" />
-      <workItem from="1615628882570" duration="104000" />
+      <workItem from="1615628882570" duration="444000" />
+      <workItem from="1615629346509" duration="1541000" />
     </task>
     <servers />
   </component>
@@ -136,86 +139,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="202" key="#Deployment" timestamp="1603882855595">
-      <screen x="39" y="23" width="1641" height="1027" />
+    <state x="244" y="98" key="SettingsEditor" timestamp="1615629483265">
+      <screen x="45" y="25" width="1395" height="875" />
     </state>
-    <state x="459" y="202" key="#Deployment/39.23.1641.1027@39.23.1641.1027" timestamp="1603882855595" />
-    <state x="443" y="189" key="#SSH_Configurations" timestamp="1603882854039">
-      <screen x="39" y="23" width="1641" height="1027" />
+    <state x="244" y="98" key="SettingsEditor/45.25.1395.875@45.25.1395.875" timestamp="1615629483265" />
+    <state x="407" y="214" width="670" height="676" key="search.everywhere.popup" timestamp="1615629352294">
+      <screen x="45" y="25" width="1395" height="875" />
     </state>
-    <state x="443" y="189" key="#SSH_Configurations/39.23.1641.1027@39.23.1641.1027" timestamp="1603882854039" />
-    <state x="324" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603918450663">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state x="324" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/39.23.1641.1027@39.23.1641.1027" timestamp="1603918450663" />
-    <state x="597" y="298" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604438637937">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state x="597" y="298" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/39.23.1641.1027@39.23.1641.1027" timestamp="1604438637937" />
-    <state width="1597" height="340" key="GridCell.Tab.0.bottom" timestamp="1603918830488">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.0.bottom/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830488" />
-    <state width="1597" height="340" key="GridCell.Tab.0.center" timestamp="1603918830486">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.0.center/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830486" />
-    <state width="1597" height="340" key="GridCell.Tab.0.left" timestamp="1603918830485">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.0.left/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830485" />
-    <state width="1597" height="340" key="GridCell.Tab.0.right" timestamp="1603918830487">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.0.right/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830487" />
-    <state width="1597" height="340" key="GridCell.Tab.1.bottom" timestamp="1603918830490">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.1.bottom/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830490" />
-    <state width="1597" height="340" key="GridCell.Tab.1.center" timestamp="1603918830489">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.1.center/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830489" />
-    <state width="1597" height="340" key="GridCell.Tab.1.left" timestamp="1603918830488">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.1.left/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830488" />
-    <state width="1597" height="340" key="GridCell.Tab.1.right" timestamp="1603918830490">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.1.right/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830490" />
-    <state width="1597" height="340" key="GridCell.Tab.2.bottom" timestamp="1603918830492">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.2.bottom/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830492" />
-    <state width="1597" height="340" key="GridCell.Tab.2.center" timestamp="1603918830491">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.2.center/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830491" />
-    <state width="1597" height="340" key="GridCell.Tab.2.left" timestamp="1603918830491">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.2.left/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830491" />
-    <state width="1597" height="340" key="GridCell.Tab.2.right" timestamp="1603918830491">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="1597" height="340" key="GridCell.Tab.2.right/39.23.1641.1027@39.23.1641.1027" timestamp="1603918830491" />
-    <state x="361" y="175" key="SettingsEditor" timestamp="1603918474637">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state x="361" y="175" key="SettingsEditor/39.23.1641.1027@39.23.1641.1027" timestamp="1603918474637" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1604438626141">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state width="500" height="445" key="SwitcherDM/39.23.1641.1027@39.23.1641.1027" timestamp="1604438626141" />
-    <state x="698" y="440" key="WebDeployment.AddServerDialog.v.1" timestamp="1603880663798">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state x="698" y="440" key="WebDeployment.AddServerDialog.v.1/39.23.1641.1027@39.23.1641.1027" timestamp="1603880663798" />
-    <state x="254" y="143" width="998" height="804" key="find.popup" timestamp="1604434882910">
-      <screen x="39" y="23" width="1641" height="1027" />
-    </state>
-    <state x="254" y="143" width="998" height="804" key="find.popup/39.23.1641.1027@39.23.1641.1027" timestamp="1604434882910" />
+    <state x="407" y="214" width="670" height="676" key="search.everywhere.popup/45.25.1395.875@45.25.1395.875" timestamp="1615629352294" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
