@@ -1,0 +1,27 @@
+.block-case-studies-grid {
+  &.bg-white {
+    margin: 100px 0px;
+    @include media-breakpoint-down(md) {
+      margin: 50px 0px;
+    }        
+  }
+  &.bg-off-white {
+    padding: 100px 0px;
+    @include media-breakpoint-down(md) {
+      padding: 50px 0px;
+    }        
+  }
+  .col-6 {
+    opacity: 0.6;
+    img {
+      filter: grayscale(100%);
+      transition: filter .3s ease-in-out;
+      will-change: filter;
+    }
+    &:hover {
+      img {
+        filter: grayscale(0%);
+      }
+    }        
+  }
+}

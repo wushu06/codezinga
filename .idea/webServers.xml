@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="77951441-27f0-4c20-9061-aef5134e6439" name="codezinga" url="http://213.171.193.5">
+        <fileTransfer host="213.171.193.5" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="02ba11de-5e52-4568-9f76-7c7baae42bac" name="codezinga ssh">
+        <fileTransfer accessType="SFTP" host="ssh.codezinga.com" port="22" sshConfigId="eda9eaca-e469-40c6-91c0-0c89be5ec93c" sshConfig="csh2598211@ssh.codezinga.com:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

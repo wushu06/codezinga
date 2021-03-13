@@ -1,0 +1,10 @@
+.accordion {
+  [data-toggle="collapse"] {
+    font-weight: normal;
+    opacity: 0.5;
+    &[aria-expanded="true"] {
+      font-weight: bold;
+      opacity: 1;
+    }
+  }
+}

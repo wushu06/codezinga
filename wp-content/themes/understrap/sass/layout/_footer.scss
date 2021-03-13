@@ -1,0 +1,75 @@
+footer {
+  padding: 100px 0px;
+  background-color: $dark-navy-blue;
+  @include media-breakpoint-down(md) {
+    padding: 50px 0px 100px 0px;
+  }       
+  .cta_button {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    background-image: linear-gradient(101deg, $lipstick 0%, $royal);
+    padding: 1rem 1.5rem;
+    border-radius: 50px;
+    z-index: 999;
+    @include media-breakpoint-down(md) {
+      font-size: 12px;
+      line-height: 40px;
+      padding: 0 1rem;
+      left: 10px;
+      bottom: 10px;
+    }       
+  }
+  #footer-menu-1, #footer-menu-2 {
+    margin: 0;
+    .nav-item {
+      .nav-link {
+        transition: color .3s ease-in-out;
+        will-change: color;  
+        position: relative;
+        left: 0px;
+        text-decoration: none;
+        padding: 0px 0px 5px 0px;
+        color: $slate-grey;
+        &:hover {
+          color: $white;
+        }        
+        @include media-breakpoint-down(md) {
+          color: $white;
+        }             
+      }
+    }
+  }
+  .tbb-link {
+    transition: color .3s ease-in-out;
+    will-change: color;  
+    position: relative;
+    left: 0px;
+    text-decoration: none;
+    padding: 0px 0px 5px 0px;
+    color: $slate-grey;
+    &:hover {
+      color: $white;
+    }        
+    @include media-breakpoint-down(md) {
+      color: $white;
+    }         
+  }
+  .site-info {
+    @include media-breakpoint-down(md) {
+      font-size: 14px;
+      line-height: 18px;
+    }                 
+  }
+  .social-links {
+    li {
+      a {
+        color: $white-smoke;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: $pink;
+        } 
+      }
+    }
+  }
+}

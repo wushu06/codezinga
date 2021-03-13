@@ -1,0 +1,12 @@
+.block-full-width {
+  margin: 100px 0px;
+  &.extra-spacing {
+    margin: 200px 0px 100px 0px;  
+  }
+  @include media-breakpoint-down(md) {
+    margin: 50px 0px;
+    &.extra-spacing {
+      margin: 100px 0px 50px 0px;  
+    }
+  }      
+}

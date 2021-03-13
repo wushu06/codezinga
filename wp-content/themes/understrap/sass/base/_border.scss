@@ -1,0 +1,20 @@
+.border-light-grey {
+  border-color: $light-grey;
+}
+
+.border-ghost-white {
+  border-color: $ghost-white;
+}
+
+.column-border-top {
+  &:before {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: $pale-grey;
+    width: calc(100% - 30px);
+    left: 15px;
+    position: absolute;
+    top: 0px;
+  }
+}

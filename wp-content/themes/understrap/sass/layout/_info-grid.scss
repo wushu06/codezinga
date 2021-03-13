@@ -1,0 +1,16 @@
+.block-info-grid {
+  padding: 100px 0px;
+  &-icon {
+    width: 40px;
+    height: 40px;
+  }
+  div[class^="col-"] {
+    min-height: 150px;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 50px 0px;
+    div[class^="col-"] {
+      min-height: unset;
+    }    
+  }      
+}

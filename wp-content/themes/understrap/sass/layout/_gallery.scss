@@ -1,0 +1,57 @@
+.btn-default {
+  padding: 10px 15px 10px 15px;
+  background-color: transparent;
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: 0;
+  color: $pink;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-size: 16px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.block-gallery {
+  margin-bottom: 50px;
+  margin-top: -50px;
+  .filter-button-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0px 20px 0px;
+  }
+  .explore-btn {
+    @extend .btn-default
+  }
+
+}
+.fancybox-content {
+  padding: 0;
+  @include media-breakpoint-up(md) {
+    width: 80%;
+    position: absolute;
+    height: 100vh;
+    right: 0;
+  }
+  .gallery-modal {
+    &-content {
+      padding: 40px;
+    }
+    img {
+      width: 100%;
+    }
+    h5 {
+      margin: 30px 0 0;
+    }
+    span {
+      color: $light-grey;
+      margin-bottom: 30px;
+    }
+    a {
+      @extend .btn-default;
+      margin-left: -15px;
+    }
+  }
+
+}

@@ -1,0 +1,308 @@
+.logo-text {
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+  font-weight: bold;
+}
+.menu-blocker {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1031;
+  display: none;
+  top: 0px;
+  left: 0px;
+}
+.page:not(.home) {
+  .menu-toggle, .logo-text {
+    color: $dark-navy-blue !important;
+    &:before {
+      background-color: $dark-navy-blue;
+    }
+    &:after {
+      color: $dark-navy-blue;
+    }
+  }
+  #logo {
+    path {
+      fill: $dark-navy-blue;
+    }
+    g {
+      path {
+        fill: $dark-navy-blue;
+      }
+    }
+  }
+}
+nav {
+  padding: 25px !important;
+  transition: background-color .3s ease-in-out;
+  will-change: background-color;
+  &.dark{
+    .menu-toggle, .logo-text {
+      color: $dark-navy-blue !important;
+      &:before {
+        background-color: $dark-navy-blue; 
+      }
+      &:after {
+        color: $dark-navy-blue;
+      }
+    }
+    #logo {
+      path {
+        fill: $dark-navy-blue;
+      }
+      g {
+        path {
+          fill: $dark-navy-blue;
+        }
+      }
+    }    
+  }  
+  &.scrolled {
+    background-color: $dark-navy-blue;
+    .menu-toggle, .logo-text {
+      color: $white !important;
+      &:before {
+        background-color: $white; 
+      }
+      &:after {
+        color: $white;
+      }
+    }
+    #logo {
+      path {
+        fill: $white;
+      }
+      g {
+        path {
+          fill: $white;
+        }
+      }
+    }        
+  }  
+  .menu-toggle {
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+    color: $white !important;
+    position: relative;
+    z-index: 1033;
+    transition: color .3s ease-in-out;
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 20px;
+    }         
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $white;
+      position: absolute;
+      bottom: 0px;
+      transition: background-color .3s ease-in-out;
+    }
+    &:after {
+      content: '+';
+      color: $white;
+      display: inline-block;
+      margin-left: 5px;
+      transition: transform .3s ease-in-out, color .3s ease-in-out;
+      transform: rotate(0deg);
+      will-change: transform;
+      font-size: 20px;
+      line-height: 24px;
+      @include media-breakpoint-down(md) {
+        font-size: 16px;
+        line-height: 20px;
+      }            
+    }
+    &.open {
+      color: $dark-navy-blue !important;
+      &:before {
+        background-color: $dark-navy-blue; 
+      }      
+      &:after {
+        color: $dark-navy-blue;
+        transform: rotate(315deg);
+      }
+    }
+  }
+  .navbar-brand {
+    position: relative;
+    z-index: 1032;
+    svg {
+      max-width: 100%;
+    }
+    @include media-breakpoint-down(md) {
+      width: 150px;
+    }      
+  }
+  .menu-tray {
+    background-color: $off-white;
+    width: auto;
+    position: fixed;
+    right: -100%;
+    top: 0px;
+    height: 100%;
+    transition: right .5s ease-in-out;
+    will-change: right;
+    z-index: 1032;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &.open {
+      right: 0px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }        
+    #main-menu-container {
+      padding: 0px 100px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      @include media-breakpoint-down(md) {
+        padding: 0px 25px;
+      }    
+    }
+    .menu-footer {
+      padding: 0px 100px;
+      a {
+        color: $white;
+        transition: color .3s ease-in-out;
+        &:hover {
+          color: $lipstick;
+        }
+      }
+      @include media-breakpoint-down(md) {
+        padding: 0px 25px;
+        font-size: 12px;
+      }          
+    }
+    #main-menu {
+      &:hover {
+        .nav-item {
+          .nav-link {
+            color: rgba(0, 2, 34, 0.2);
+          }
+        }
+      }
+      .nav-item {
+        &.dropdown {
+          max-height: 50px;
+          transition: max-height .5s ease-in-out;
+          overflow: hidden;
+          &:hover {
+            max-height: 200px;
+          }
+          @include media-breakpoint-down(md) {
+            max-height: 200px;
+          }             
+        }          
+        .nav-link {
+          color: $dark-navy-blue;
+          padding: 0px;
+          transition: color .5s ease-in-out;
+          will-change: color;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          &:after {
+            display: none;
+          }
+        }
+        &.current-menu-item {
+          .nav-link {
+            font-weight: bold;
+          }
+        }
+        .dropdown-menu {
+          left: unset;
+          top: 0px;
+          border: 0;
+          background-color: transparent;
+          padding: 0px;
+          margin: 0px;
+          position: relative;
+          display: block;
+          &:hover {
+            .nav-item {
+              .dropdown-item {
+                color: rgba(228, 29, 93, 0.2);
+              }
+            }
+          }          
+          .nav-item {
+            font-size: 30px;
+            line-height: 50px;
+            &.current-menu-item {
+              a {
+                font-weight: bold;
+              }
+            }              
+            @include media-breakpoint-down(md) {
+              font-size: 20px;
+              line-height: 30px;
+            }                
+            .dropdown-item {
+              color: $lipstick;
+              padding: 0px 0px 0px 20px;
+              transition: color .5s ease-in-out;
+              will-change: color;     
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              @include media-breakpoint-down(md) {
+                font-size: 20px;
+                line-height: 30px;
+                padding: 0px 0px 0px 15px;
+              }                
+              &:hover {
+                background-color: transparent;
+                color: $lipstick;
+              }
+              &:before {
+                content: '-';
+                display: block;
+                position: absolute;
+                left: 1px;
+                color: inherit;
+                font-size: 40px;
+                line-height: 40px;
+                @include media-breakpoint-down(md) {
+                  font-size: 20px;
+                  line-height: 30px;
+                }                   
+              }                  
+            }        
+          }
+        }        
+        &:hover {
+          .nav-link {
+            color: $dark-navy-blue;
+          }
+        }
+        &.large {
+          font-size: 30px;
+          line-height: 50px;
+          @include media-breakpoint-down(md) {
+            font-size: 20px;
+            line-height: 30px;
+          }                    
+        }
+        &.small {
+          font-size: 20px;
+          line-height: 36px;
+          @include media-breakpoint-down(md) {
+            font-size: 20px;
+            line-height: 30px;
+          }                    
+        }
+      }
+    }
+  }
+}

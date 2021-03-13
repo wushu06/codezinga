@@ -1,0 +1,17 @@
+.block-featured-posts {
+  &.bg-white {
+    margin: 100px 0px;
+    @include media-breakpoint-down(md) {
+      margin: 50px 0px;
+    }        
+  }
+  &.bg-off-white {
+    padding: 100px 0px;
+    @include media-breakpoint-down(md) {
+      padding: 50px 0px;
+    }        
+  }
+  &-icon {
+    height: 50px;
+  }
+}

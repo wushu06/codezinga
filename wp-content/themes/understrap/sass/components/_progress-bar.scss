@@ -1,0 +1,10 @@
+.progress-bar {
+  width: 100%;
+  background-color: $white;
+  height: 1px;
+  &-inner {
+    height: 100%;
+    width: 0px;
+    background-color: $dark-navy-blue;
+  }
+}

@@ -1,0 +1,43 @@
+.link {
+  transition: color .3s ease-in-out;
+  will-change: color;  
+  position: relative;
+  left: 0px;
+  transition: left .5s ease-in-out;
+  display: inline-block;
+  @include rfs(16px);
+  font-weight: 600;
+  line-height: 1;  
+  img {
+    max-width: 19px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.2rem;
+    position: relative;
+    left: 0px;
+    transition: left .5s ease-in-out;    
+  }
+  &:hover {
+    left: 10px;
+    img {
+      left: 5px;
+    }
+  }
+  &-ghost-white {
+    color: $ghost-white;
+    &:hover {
+      color: $white;
+    }
+  }
+  &-slate-grey {
+    color: $slate-grey;
+    &:hover {
+      color: $white;
+    }
+  }
+  &-pink {
+    color: $lipstick;
+    &:hover {
+      color: $lipstick;
+    }
+  }  
+}

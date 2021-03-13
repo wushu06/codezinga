@@ -1,0 +1,39 @@
+.list {
+  list-style-type: none;
+  padding: 0px;
+  position: relative;
+  li {
+    padding-left: 40px;
+    position: relative;
+  }
+  &.ticked {
+    li {
+      &:before {
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-image:url('../images/tick.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0px;
+        display: block;
+      }
+    }
+  }
+  &.dashed {
+    li {
+      &:before {
+        content: '-';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: 0px;
+        color: $pink;
+        font-size: 2rem;
+        line-height: 1rem;
+      }
+    }
+  }
+}

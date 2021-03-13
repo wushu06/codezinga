@@ -1,0 +1,7 @@
+.block-call-to-action {
+  padding: 75px 0px;
+  background-image: linear-gradient(125deg, $lipstick 9%, $royal 100%);
+  @include media-breakpoint-down(md) {
+    padding: 50px 0px;
+  }      
+}

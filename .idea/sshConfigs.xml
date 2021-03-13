@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SshConfigs">
+    <configs>
+      <sshConfig authType="PASSWORD" host="ssh.codezinga.com" id="eda9eaca-e469-40c6-91c0-0c89be5ec93c" port="22" nameFormat="DESCRIPTIVE" username="csh2598211" />
+    </configs>
+  </component>
+</project>
