@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a235d679-ef48-4067-bb84-3215db0c3e94" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +60,14 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/circleci" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/circleci" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/wp-content/plugins/wp-codeable-form" />
     </key>
@@ -91,7 +91,7 @@
       <workItem from="1605206420692" duration="5223000" />
       <workItem from="1606126420375" duration="1109000" />
       <workItem from="1615628882570" duration="444000" />
-      <workItem from="1615629346509" duration="10724000" />
+      <workItem from="1615629346509" duration="11379000" />
     </task>
     <servers />
   </component>
