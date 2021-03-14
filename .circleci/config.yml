@@ -1,4 +1,6 @@
 version: 2 # CircleCI version
+orbs:
+  ghostinspector: ghostinspector/test-runner@1.0.2
 jobs:
   build:
     machine: true # Use a Linux VM instead of docker environment
