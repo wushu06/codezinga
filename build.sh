@@ -1,6 +1,3 @@
-### Tailor this command to suit your application, *must* have the trailing '&'
-node server.js &
-
 # Download ngrok and unzip
 wget -qN https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok-stable-linux-amd64.zip
@@ -27,7 +24,7 @@ SUITE_RESULT=
 PASSING=
 
 # Execute Ghost Inspector suite via API and grab the result ID
-EXECUTE_URL="https://api.ghostinspector.com/v1/suites/$GI_SUITE/execute/?apiKey=$GI_API_KEY&startUrl=$START_URL&immediate=1"
+EXECUTE_URL="https://api.ghostinspector.com/v1/suites/$GHOST_SUITE_ID/execute/?apiKey=$GHOST_API_KEY&startUrl=$START_URL&immediate=1"
 echo "Executing suite: $EXECUTE_URL"
 RESULT_ID=$(curl -s $EXECUTE_URL | ./jq -r '.data._id')
 
@@ -35,7 +32,7 @@ RESULT_ID=$(curl -s $EXECUTE_URL | ./jq -r '.data._id')
 echo "Polling for suite results (ID: $RESULT_ID)"
 while [ "$STATUS" = 'null' ]; do
   sleep 5
-  SUITE_RESULT=$(curl -s "https://api.ghostinspector.com/v1/suite-results/$RESULT_ID/?apiKey=$GI_API_KEY")
+  SUITE_RESULT=$(curl -s "https://api.ghostinspector.com/v1/suite-results/$RESULT_ID/?apiKey=$GHOST_API_KEY")
   STATUS=$(echo $SUITE_RESULT | ./jq -r '.data.passing')
   echo " - status: $STATUS"
 done
