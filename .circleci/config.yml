@@ -10,6 +10,8 @@ jobs:
         - run: docker-compose up -d
         - store_artifacts:
             path: ~/repo/features/fail-screenshots
-        - run:
-            name: Execute test
-            command: bash build.sh
+        - ghostinspector/test-docker-app:
+            api-key: $GHOST_API_KEY
+            suite-id: $GHOST_SUITE_ID
+            vpn-token: $NGROK_TOKEN
+            vpn-target: 'my-docker-image:80'
