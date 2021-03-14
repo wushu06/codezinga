@@ -31,12 +31,20 @@ RESULT_ID=$(curl -s $EXECUTE_URL | ./jq -r '.data._id')
 
 # Poll for the suite result, sleep for a few seconds if it hasn't changed
 echo "Polling for suite results (ID: $RESULT_ID)"
-while [ "$STATUS" = 'null' ]; do
-  sleep 5
-  SUITE_RESULT=$(curl -s "https://api.ghostinspector.com/v1/suite-results/$RESULT_ID/?apiKey=$GHOST_API_KEY")
-  STATUS=$(echo $SUITE_RESULT | ./jq -r '.data.passing')
-  echo " - status: $STATUS"
-done
+echo "https://api.ghostinspector.com/v1/suite-results/$RESULT_ID/?apiKey=$GHOST_API_KEY";
+
+if [ $RESULT_ID == null ]; then
+  echo "Suite failed! ¯\_(ツ)_/¯"
+else
+  while [ "$STATUS" = 'null' ]; do
+    sleep 5
+    SUITE_RESULT=$(curl -s "https://api.ghostinspector.com/v1/suite-results/$RESULT_ID/?apiKey=$GHOST_API_KEY")
+    STATUS=$(echo $SUITE_RESULT | ./jq -r '.data.passing')
+    echo " - status: $STATUS"
+  done
+fi
+
+
 
 # status has been updated, check results for "passing"
 if [ "$(echo $SUITE_RESULT | ./jq -r '.data.passing')" != 'true' ]; then
