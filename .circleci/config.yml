@@ -10,3 +10,20 @@ jobs:
         - run: docker-compose up -d
         - store_artifacts:
             path: ~/repo/features/fail-screenshots
+
+test:
+    post:
+        # Download ngrok and open tunnel to our application
+        - wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+        - unzip ngrok-stable-linux-amd64.zip
+        - chmod +x ngrok
+        - ./ngrok authtoken $NGROK_TOKEN
+        - ./ngrok http 3000:
+            background: true
+        # Download json parser for determining ngrok tunnel
+        - wget https://stedolan.github.io/jq/download/linux64/jq
+        - chmod +x jq
+        # Execute Ghost Inspector tests using the ngrok tunnel
+        - curl &quot;https://api.ghostinspector.com/v1/suites/$GHOST_SUITE_ID/execute/?apiKey=$GHOST_API_KEY&amp;amp;startUrl=$(curl &#39;http://localhost:4040/api/tunnels&#39; | ./jq -r &#39;.tunnels[1].public_url&#39;)&quot; &amp;gt; ghostinspector.json
+        # Exit with a fail status if any tests have failed
+        - if [ $(grep -c &#39;&quot;passing&quot;:false&#39; ghostinspector.json) -ne 0 ]; then exit 1; fi
