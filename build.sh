@@ -17,6 +17,7 @@ sleep 5
 # Grab the ngrok url to send to the API
 START_URL=$(curl -s 'http://localhost:4040/api/tunnels' | ./jq -r '.tunnels[1].public_url')
 echo "Using start URL: $START_URL"
+echo "Suite id: $GHOST_SUITE_ID"
 
 # Set up a couple variables to monitor result state
 STATUS='null'

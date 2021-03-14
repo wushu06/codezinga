@@ -1,6 +1,4 @@
 version: 2 # CircleCI version
-orbs:
-  ghostinspector: ghostinspector/test-runner@1.0.2
 jobs:
   build:
     machine: true # Use a Linux VM instead of docker environment
@@ -12,8 +10,6 @@ jobs:
         - run: docker-compose up -d
         - store_artifacts:
             path: ~/repo/features/fail-screenshots
-        - ghostinspector/test-docker-app:
-            api-key: $GHOST_API_KEY
-            suite-id: $GHOST_SUITE_ID
-            vpn-token: $NGROK_TOKEN
-            vpn-target: 'my-docker-image:80'
+        - run:
+            name: Execute test
+            command: bash build.sh
